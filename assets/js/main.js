@@ -29,6 +29,10 @@ if (url !== 'http://127.0.0.1:8080/') {
     fixedNavbar.style.left = '0';
 }
 
+window.addEventListener('resize', function() {
+    fixedNavbar.style.width = fakeNavbar.offsetWidth + 'px';
+});
+
 var affectedElement = [];
 
 changeOverflow.forEach(function(element) {
