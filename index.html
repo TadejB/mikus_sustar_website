@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
     <title>Mikuž in Šuštar</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -20,19 +21,19 @@
             <div class="navbar">
                 <ul class="menu">
                     <li>
-                        <a href="#section-contact" class="change-overflow">KONTAKT</a>
+                        <a href="#section-contact" class="change-overflow add-padding">KONTAKT</a>
                     </li>
                     <li>
-                        <a href="#section-presentation" class="change-overflow">PREDSTAVITEV</a>
+                        <a href="#section-presentation" class="change-overflow add-padding">PREDSTAVITEV</a>
                     </li>
                     <li>
-                        <a href="#section-profession" class="change-overflow">PODROČJA DELA</a>
+                        <a href="#section-profession" class="change-overflow add-padding">PODROČJA DELA</a>
                     </li>
                     <li>
-                        <a href="#section-links" class="change-overflow">KORISTNE POVEZAVE</a>
+                        <a href="#section-links" class="change-overflow add-padding">KORISTNE POVEZAVE</a>
                     </li>
                     <li>
-                        <a href="#" class="change-overflow">GALERIJA</a>
+                        <a href="#section-gallery" class="change-overflow add-padding">GALERIJA</a>
                     </li>
                 </ul>
                 <div class="space-left"></div>
@@ -51,27 +52,27 @@
         <div class="fake-navbar"></div>
         <div class="wrapper-navbar-logo-holder-sm">
             <div class="navbar-logo-holder-sm">
-                <img src="/assets/img/logo.png" alt="mikuž  in šuštar logo">
+                <img src="/assets/img/logo.png" alt="mikuž in šuštar logo">
                 <div class="navbar">
                     <ul class="menu">
                         <li>
-                            <a href="#section-contact">KONTAKT</a>
+                            <a href="#section-contact" id="contact" class="add-padding">KONTAKT</a>
                         </li>
                         <li>
-                            <a href="#section-presentation">PREDSTAVITEV</a>
+                            <a href="#section-presentation" id="presentation" class="add-padding">PREDSTAVITEV</a>
                         </li>
                         <li>
-                            <a href="#section-profession">PODROČJA DELA</a>
+                            <a href="#section-profession" class="add-padding">PODROČJA DELA</a>
                         </li>
                         <li>
-                            <a href="#section-links">KORISTNE POVEZAVE</a>
+                            <a href="#section-links" class="add-padding">KORISTNE POVEZAVE</a>
                         </li>
                         <li>
-                            <a href="#">GALERIJA</a>
+                            <a href="#section-gallery" class="add-padding">GALERIJA</a>
                         </li>
                     </ul>
-                    <div class="space-left"></div>
-                    <div class="space-right"></div>
+                    <div class="space-left" class="add-padding"></div>
+                    <div class="space-right" class="add-padding"></div>
                 </div>
             </div>
         </div>
@@ -146,6 +147,11 @@
                     <div id="map"></div>
                     <script>
                         function initMap() {
+                            var isDraggable = document.body.clientWidth > 480 ? true : false;
+                            var mapOptions = {
+                                draggable: isDraggable,
+                                scrollwheel: false
+                                }
                             var staracesta = { lat: 46.055095, lng: 14.502974 };
                             var map = new google.maps.Map(document.getElementById('map'), {
                                 zoom: 16,
@@ -163,10 +169,11 @@
 
                 </div>
             </div>
+               
         </div>
-        <div class="line"></div>
+        <div class="line-contact"></div> 
     </section>
-    <section id="section-presentation">
+    <section id="section-presentation" class="add-section-padding">
         <div class="presentation-holder">
             <div class="presentation-lara">
                 <img src="/assets/img/lara.png" alt="lawyer-lara" class="image-lawyer">
@@ -222,10 +229,10 @@
                     </div>
                 </div>
             </div>
+            <div class="line"></div>
         </div>
-        <div class="line"></div>
     </section>
-    <section id="section-profession">
+    <section id="section-profession" class="add-section-padding">
         <div class="profession-holder">
             <div class="heading-14 title-profession">
                 Področja dela
@@ -241,9 +248,9 @@
                     <div class="mt-12">Dedno pravo</div>
                     <div class="mt-12">Družinsko pravo</div>
                     <div class="mt-12">Gospodarsko pravo</div>
-                    <div class="mt-12">Insolvenčno pravo</div>
                 </div>
                 <div class="right-column">
+                    <div class="mt-12">Insolvenčno pravo</div>
                     <div class="mt-12">Izvršilno pravo</div>
                     <div class="mt-12">Konkurenčno pravo</div>
                     <div class="mt-12">Delovno pravo</div>
@@ -254,8 +261,9 @@
                 </div>
             </div>
         </div>
+        <div class="line-profession"></div>
     </section>
-    <section id="section-links">
+    <section id="section-links" class="add-section-padding">
         <div class="links-holder">
             <div class="column-1">
                 <div>
@@ -301,17 +309,24 @@
             </div>
         </div>
     </section>
-    <section id="section-gallery">
-        <!-- <div class="abc">
-            <img src="/assets/img/cb_vhod.jpg" alt="">
-            </div>
-            <div class="abd">
-                    <img src="/assets/img/cb_vhodna-vrata.jpg" alt="">
-            </div>
-            <div class="abe">
-                    <img src="/assets/img/cb_IMG_2458.jpg" alt="">
-            </div>
-        </div> -->
+    <section id="section-gallery" class="add-section-padding">
+        <div class="gallery-holder">
+            <class class="img-holder">
+                    <div class="vertical-img">
+
+                        </div>
+                        <div class="vertical-img">
+                            
+                        </div>
+            </class>
+            <class class="img-holder">
+                
+            </class>
+            <class class="img-holder">
+                
+             </class>
+        </div>
+    
     </section>
 </body>
 <script src="/assets/js/main.js"></script>
